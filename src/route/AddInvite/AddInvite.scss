@@ -1,0 +1,70 @@
+.add-guest-button {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.selected-contacts {
+    display: flex;
+    flex-wrap: nowrap; // Prevent wrapping so horizontal overflow occurs
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    overflow-x: auto; // Enable horizontal scrolling
+    overflow-y: hidden; // Prevent vertical scrolling
+    max-height: 150px; // Adjust based on your UI needs
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    padding-bottom: 5px; // Space for shadow effect
+
+    // Hide scrollbar for Webkit browsers
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;  // Hide scrollbar for IE & Edge
+    scrollbar-width: none;  // Hide scrollbar for Firefox
+
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &.overflow {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    .selected-contact {
+        flex: 0 0 auto; // Prevent shrinking to keep inline
+        animation: fadeInScale 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        .avatar {
+            position: relative;
+
+            .checkmark {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}

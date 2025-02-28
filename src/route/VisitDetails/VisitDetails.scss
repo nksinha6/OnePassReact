@@ -1,0 +1,56 @@
+.VisitDetails-card {
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+
+    .profile-section {
+        display: flex;
+        justify-content: center;
+
+        .profile-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    }
+
+    .invite-text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .directions-text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .directions-link {
+        color: #007bff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .qr-section {
+        margin-top: 15px;
+
+        .qr-image {
+            width: 204px;
+            height: auto;
+            margin-top: 10px;
+        }
+    }
+    
+    .verify-btn {
+        border-radius: 8px;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+}

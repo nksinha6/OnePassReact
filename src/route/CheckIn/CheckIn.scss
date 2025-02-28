@@ -1,0 +1,18 @@
+@import "../../asset/css/variables.scss";
+@import "../../asset/css/mixins.scss";
+
+.checkin-image-wrapper {
+  width: 50%;
+  @include desktop-small {
+    width: 55%;
+  }
+  @include tablet {
+    width: 68%;
+  }
+  @include mobile {
+    width: 62%;
+  }
+  @include mobile-large {
+    width: 90%;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../asset/css/variables.scss";
+
+.input-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+/* For Chrome, Safari, Edge, and Opera */
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/* For Firefox */
+input[type="time"]::-moz-focus-inner {
+    border: 0;
+}
+
+/* For Chrome, Safari, Edge, and Opera */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.back-button-icon.btn {
+    font-size: 28px !important;
+}

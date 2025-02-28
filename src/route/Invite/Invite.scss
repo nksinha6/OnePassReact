@@ -1,0 +1,38 @@
+.enter-otp-image-wrapper {
+    // width: 204px;
+    // height: 204px;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+}
+
+.title-invite-sent {
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 20px !important;
+}
+
+.invite-sent-message {
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    span {
+
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+}

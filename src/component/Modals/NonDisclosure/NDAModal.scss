@@ -1,0 +1,40 @@
+.nda-modal {
+    .modal-content {
+        border-radius: 12px;
+        padding: 20px;
+        text-align: left;
+        max-width: 350px;
+        margin: auto;
+
+        .NDA-Text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+        .NDA-Title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21.78px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+    }
+
+
+    .nda-image {
+        width: 142px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .accept-btn {
+        border-radius: 8px;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,22 @@
+@import "../../asset/css/variables.scss";
+@import "../../asset/css/mixins.scss";
+
+.login-image-wrapper {
+ flex: 1;
+}
+
+.flag-of-india-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 25px;
+  height: 25px;
+
+}
+
+.mobile-number-prefixer-wrapper {
+  width: 90px;
+  margin-right: 10px !important;
+  text-align: end;
+  font-size: 20px;
+}

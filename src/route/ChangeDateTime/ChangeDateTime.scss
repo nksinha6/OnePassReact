@@ -1,0 +1,190 @@
+@import "../../asset/css/variables.scss";
+
+
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOutScale {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+
+.change-datetime {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 55px);
+    padding-bottom: 10px;
+    padding-right: 5px;
+    overflow-y: hidden;
+    background: #fff;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 65px);
+        overflow-y: hidden;
+        background: #fff;
+        transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+        .main-content-header{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            .tabs {
+                display: flex;
+                justify-content: space-around;
+                border-bottom: 1px solid #ccc;
+    
+                button {
+                    flex: 0;
+                    padding: 10px;
+                    border: none;
+                    background: none;
+                    font-size: 16px;
+                    cursor: pointer;
+    
+                    &.active {
+                        font-weight: bold;
+                        border-bottom: 2px solid black;
+                    }
+                }
+            }
+    
+            .selected-contacts {
+                display: flex;
+                flex-wrap: nowrap; // Prevent wrapping so horizontal overflow occurs
+                gap: 20px;
+                justify-content: start;
+                align-items: center;
+                overflow-x: auto; // Enable horizontal scrolling
+                overflow-y: hidden; // Prevent vertical scrolling
+                max-height: 150px; // Adjust based on your UI needs
+                transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                padding-bottom: 5px; // Space for shadow effect
+    
+                // Hide scrollbar for Webkit browsers
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+    
+                -ms-overflow-style: none; // Hide scrollbar for IE & Edge
+                scrollbar-width: none; // Hide scrollbar for Firefox
+    
+                position: relative;
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 20px;
+                    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.3s ease-in-out;
+                }
+    
+                &.overflow {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+    
+                .selected-contact {
+                    flex: 0 0 auto; // Prevent shrinking to keep inline
+                    animation: fadeInScale 0.3s ease-in-out;
+                    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    
+                    .avatar {
+                        position: relative;
+    
+                        .checkmark {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            width: 15px;
+                            height: 15px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-content-body{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            height: auto;
+            overflow-y: auto;
+            padding-right: 5px;
+
+
+            .input-title {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 27px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+            }
+        
+            .Mobile-Number-country-select{
+                max-width: 100px !important;
+            }
+
+        }
+
+
+        // Smooth removal animation
+        .removing {
+            animation: fadeOutScale 0.3s ease-in-out !important;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px;
+
+            button {
+                flex: 1;
+                padding: 12px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .cancel {
+                background: red;
+                color: white;
+                margin-right: 8px;
+            }
+
+            .review {
+                background: black;
+                color: white;
+            }
+        }
+    }
+
+}

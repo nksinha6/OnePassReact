@@ -1,0 +1,43 @@
+.share-modal {
+    .modal-content {
+      border-radius: 10px;
+    }
+  
+    .modal-header {
+      border-bottom: none;
+    }
+  
+    .share-icons {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+  
+      .share-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+  
+        .icon {
+          font-size: 30px;
+          margin-bottom: 5px;
+          transition: transform 0.2s ease-in-out;
+  
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+  
+        span {
+          font-size: 14px;
+        }
+  
+        .whatsapp { color: #25D366; }
+        .facebook { color: #1877F2; }
+        .twitter { color: #1DA1F2; }
+        .email { color: gray; }
+        .more { color: black; }
+      }
+    }
+  }
+  

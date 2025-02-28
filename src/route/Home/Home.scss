@@ -1,0 +1,74 @@
+@import "../../asset/css/variables.scss";
+
+.text-left {
+  text-align: left !important;
+}
+
+.toggle-container {
+  display: flex;
+  border: 1px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 200px;
+  margin: auto;
+  padding: 5px;
+  
+  .toggle-btn {
+    flex: 1;
+    padding: 8px 12px;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 5px;
+    border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.active {
+  background: white;
+  color: black;
+}
+}
+
+.home-page-header {
+  height: 335px !important;
+  background-color: #1a1a1a !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  padding-bottom: 60px !important;
+}
+
+.home-page-card {
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+.home-page-cards-container {
+  margin-top: -80px !important;
+  padding: 0px 18px !important;
+}
+
+.home-page-number-container {
+  h1 {
+    font-size: 49px !important;
+    font-weight: 600 !important;
+    line-height: 60px !important;
+  }
+
+  p {
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    line-height: 13px !important;
+  }
+}
+  .home-page-last-container {
+    width: 100% !important;
+    height: 40px !important;
+    background: #000 !important;
+    border-top-left-radius: 36px !important;
+    border-top-right-radius: 36px !important;
+    bottom: 0px !important;
+  }
+
+
